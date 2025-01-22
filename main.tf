@@ -85,7 +85,7 @@ resource "aws_instance" "kali_linux" {
 
 # Ubuntu Instance
 resource "aws_instance" "ubuntu" {
-  ami             = "ami-d83d0782-cb94-46d7-8993-f4ce15d1a484"  # Ubuntu AMI
+  ami             = "ami-0af961a0e0ef080b3"  # Ubuntu AMI
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.ubuntu_key.key_name
   security_groups = [aws_security_group.ubuntu_sg.name]
@@ -99,7 +99,7 @@ resource "aws_instance" "ubuntu" {
 
 # Windows Server 2008 Instance
 resource "aws_instance" "windows_server_2008" {
-  ami             = "ami-2641882d-acdb-46b1-9331-478ffca58e3c"  # Windows Server 2008 AMI
+  ami             = "ami-7d00b00e"  # Windows Server 2008 AMI
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.windows_key.key_name
   security_groups = [aws_security_group.windows_sg.name]
