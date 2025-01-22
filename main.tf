@@ -55,7 +55,7 @@ resource "aws_internet_gateway" "main_igw" {
 # Create a route table and associate it
 resource "aws_route_table" "main_route_table" {
   vpc_id = aws_vpc.main_vpc.id
-  routes {
+  route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.main_igw.id
   }
